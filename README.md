@@ -52,3 +52,17 @@ git clone https://github.com/harshu1236/UberProject-LocationService.git
 git clone https://github.com/harshu1236/UberProject-ReviewService.git
 git clone https://github.com/harshu1236/UberProject-AuthService.git
 git clone https://github.com/harshu1236/UberProject-BookimgService.git
+
+
+# Start Eureka Server first
+cd Uber-ServiceDiscovery-EurekaServer
+mvn spring-boot:run
+
+# Then start other services:
+cd UberProject-AuthService
+mvn spring-boot:run
+
+cd UberBookingService
+mvn spring-boot:run
+
+# ...repeat for all services
